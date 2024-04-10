@@ -19,9 +19,9 @@ body {
 }
 #page2 {
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   position: relative;
-  background-color: pink;
+  background-color: white;
 }
 #page3 {
   width: 100%;
@@ -169,6 +169,71 @@ body {
   }
 }
 
+/* Page 2 */
+
+.page2-container1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  position: relative;
+}
+.page2-container1-part1 {
+  width: 80%;
+  height: 80%;
+  text-align: center;
+  position: relative;
+  background-color: white;
+}
+.page2-container1-part1 h2 {
+  padding: 5px 0;
+  font-size: clamp(0.875rem, -1rem + 4vw, 1.75rem);
+  letter-spacing: 1px;
+}
+.page2-container1-part1 span {
+  color: #00bbf0;
+}
+.page2-container1-part1 p {
+  padding: 10px 0;
+  font-size: clamp(0.5rem, -0.5714rem + 2.2857vw, 1rem);
+  letter-spacing: 1px;
+}
+.inline-block1 {
+  display: inline-block;
+}
+.page2-part1-child {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.page2-child-inner {
+  width: 25%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f9;
+}
+.page2-child-inner h5 {
+  padding-top: 7px;
+  font-size: clamp(0.5rem, -0.4375rem + 2vw, 0.9375rem);
+}
+.page2-child-inner p {
+  font-size: clamp(0.3125rem, -0.3571rem + 1.4286vw, 0.625rem);
+}
+.page2-child-inner a {
+  font-size: clamp(0.3125rem, -0.3571rem + 1.4286vw, 0.625rem);
+  text-decoration: none;
+  color: #17204a;
+}
+
 /* Mobile View */
 
 @media only screen and (max-width: 768px) {
@@ -238,5 +303,26 @@ body {
     width: 100%;
     height: 50%;
     /* background-color: blueviolet; */
+  }
+  #page2 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: pink;
+  }
+  .page2-part1-child {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  .page2-child-inner {
+    width: 50%;
+    height: 30%;
+    background-color: #f8f8f9;
   }
 }
