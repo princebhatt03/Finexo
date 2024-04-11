@@ -21,3 +21,13 @@ function closeMenu() {
 // AOS...
 
 AOS.init();
+
+// Loader...
+
+var loader = document.querySelector('.loader');
+var loadingOverlay = document.querySelector('.overlay1');
+
+document.addEventListener('DOMContentLoaded', function () {
+  loader.classList.remove('loader');
+  loadingOverlay.style.display = 'none';
+});

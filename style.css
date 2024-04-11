@@ -11,6 +11,52 @@ body {
   width: 100%;
   height: 100%;
 }
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  color: #190e68;
+  background: radial-gradient(
+    farthest-side,
+    currentColor calc(100% - 6px),
+    #0000 calc(100% - 5px) 0
+  );
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(100% - 13px),
+    #000 calc(100% - 12px)
+  );
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9;
+  overflow: hidden;
+  border-radius: 50%;
+  animation: l19 2s infinite linear;
+}
+.loader::before,
+.loader::after {
+  content: '';
+  grid-area: 1/1;
+  background: linear-gradient(currentColor 0 0) center,
+    linear-gradient(currentColor 0 0) center;
+  background-size: 100% 10px, 10px 100%;
+  background-repeat: no-repeat;
+}
+.loader::after {
+  transform: rotate(45deg);
+}
+@keyframes l19 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.overlay1 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+}
 #page1 {
   width: 100%;
   height: 100vh;
