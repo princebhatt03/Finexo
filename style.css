@@ -547,7 +547,7 @@ ul {
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
   }
 
   .nav2 ul.active {
@@ -563,7 +563,7 @@ ul {
   }
   .nav2 a {
     text-decoration: none;
-    color: black;
+    color: #190e68;
     font-weight: bold;
     font-size: 15px;
     letter-spacing: 1px;
@@ -572,6 +572,19 @@ ul {
     text-align: center;
     padding: 10px 15px;
   }
+  .nav2 a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 2px;
+    left: 0;
+    background-color: #00bbf0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
   .hamburger {
     display: block;
     cursor: pointer;
